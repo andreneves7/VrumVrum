@@ -1,0 +1,21 @@
+Instalação Laravel
+$ composer global require "laravel/installer"
+$ echo 'export PATH=$PATH:$HOME/.composer/vendor/bin' >> .bash_profile
+
+Ativar Extensões (php.ini)
+php_mbstring
+php_openssl
+
+Criar Novo Projeto
+$ composer create-project --prefer-dist laravel/laravel <nome do projeto>
+
+Configuração
+Toda a configuração é feita a partir do diretório config
+Conteúdo da pasta storage e bootstrap/cache devem permitir escrita por parte do servidor aplicacional
+Alguns elementos de configuração encontram-se no ficheiro .env
+Caso seja necessário gerar chaves devem utilizar o comando
+$ php artisan key:generate
+A chave de produção deve ser diferente da utilizada em desenvolvimento
+
+Arranque
+$ php artisan serve
